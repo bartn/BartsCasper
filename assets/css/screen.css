@@ -778,6 +778,10 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     text-transform: uppercase;
 }
 
+.post-card-custom .post-card-byline-content {
+    margin-left: 0;
+}
+
 .post-card-byline-content span {
     margin: 0;
 }
@@ -837,6 +841,21 @@ make sure this only happens on large viewports / desktop-ish devices.
         border-top: 0;
     }
 
+    .post-card-large.post-card-custom {
+        min-height: 0;
+        padding-bottom: 30px;
+        margin-bottom: 10px;
+        border-bottom-width: 0px;
+    }
+
+    .post-card-large.post-card-custom .post-card-content-link, .post-card-large.post-card-custom .post-card-meta {
+        padding: 0;
+    }
+
+    .post-card-large.post-card-custom .post-card-content-link {
+        margin-bottom: -1em;
+    }
+
     .post-card-large:hover {
         border-bottom-color: color(var(--lightgrey) l(+10%));
     }
@@ -861,6 +880,10 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-card-large .post-card-content {
         flex: 0 1 361px;
         justify-content: center;
+    }
+
+    .post-card-large.post-card-custom .post-card-content {
+        flex: 1 1 361px;
     }
 
     .post-card-large .post-card-title {

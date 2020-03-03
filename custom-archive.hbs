@@ -1,0 +1,38 @@
+{{!< default}}
+
+<header class="site-header">
+    {{> site-header}}
+</header>
+{{#post}}
+
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+    <div class="inner posts">
+
+        <div class="post-feed">
+             {{#get "posts" include="tags, authors"}}
+                  {{#foreach posts}}
+                    {{> "post-card-mini"}}
+                      {{!-- <p>{{title}} ({{tags}})</p> --}}
+                  {{/foreach}}
+              {{/get}}
+        </div>
+        <div>
+          {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+              {{#foreach tags}}
+                <p>
+                  <a href='{{ url }}'>
+                      {{ name }} <small>({{ count.posts }})</small>
+                  </a>
+                </p>
+              {{/foreach}}
+              {{/get}}
+
+        </div>
+    </div>
+</main>
+
+              
+{{/post}}
+
