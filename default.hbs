@@ -54,19 +54,17 @@
                 <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
             {{/if}}
             <div class="subscribe-form">
-                <h1 class="subscribe-overlay-title">Er is ook een nieuwsbrief</h1>
+                <h1 class="subscribe-overlay-title">Er is ook een nieuwsbrief!!!</h1>
                 <p class="subscribe-overlay-description">In mijn nieuwsbrief deel ik regelmatig (dat is een streven) artikelen van mezelf en voornamelijk van anderen.</p>
-                <form data-members-form="subscribe">
+                    <form action="https://www.getrevue.co/profile/BartN/add_subscriber" method="post" id="revue-form" name="revue-form" target="_blank">
                     <div class="form-group">
-                        <input class="subscribe-email" data-members-email placeholder="email@voorbeeld.nl"
-                            autocomplete="false" />
-                        <button class="button primary" type="submit">
+                        <input class="subscribe-email" data-members-email name="member[email]" placeholder="email@voorbeeld.nl" autocomplete="false" />
+                        <button class="button_subscribe button primary" type="submit"  name="member[subscribe]">
                             <span class="button-content">Aanmelden</span>
-                            <span class="button-loader">{{> "icons/loader"}}</span>
                         </button>
                     </div>
                     <div class="message-success">
-                        <strong>Wow cool!</strong> Check je email even, want je hebt een bericht waarin ik je vraag om je aanmelding te bevestigen.
+                        <strong>Wow cool!</strong> Er is een nieuwe scherm geopend waarin Revue (de nieuwdbrievendienst) je uitleg geeft. <br>Dank je!
                     </div>
                     <div class="message-error">
                         Gebruik even een geldig emailadres.
@@ -107,6 +105,13 @@
                 $('body').addClass("subscribe-success");
             }
 
+            // De mijne
+            $('.button_subscribe').click(function(){
+                $('.message-success').toggle();
+                $('form').addClass("success");
+
+            })
+            
             $('.subscribe-success-message .subscribe-close').click(function () {
                 $('.subscribe-success-message').addClass('close');
             });

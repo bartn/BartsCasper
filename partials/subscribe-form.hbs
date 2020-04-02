@@ -1,19 +1,16 @@
 <section class="subscribe-form">
     <h3 class="subscribe-form-title">Er is ook een nieuwsbrief</h3>
-    <p class="subscribe-form-description">In mijn nieuwsbrief deel ik regelmatig (dat is een streven) artikelen van mezelf en voornamelijk van anderen.</p>
-    <form data-members-form="subscribe">
+    <p class="subscribe-form-description">In mijn nieuwsbrief deel ik regelmatig (dat is een streven) artikelen van
+        mezelf en voornamelijk van anderen.</p>
+    <form action="https://www.getrevue.co/profile/BartN/add_subscriber" method="post" id="revue-form" name="revue-form" target="_blank">
         <div class="form-group">
-            <input class="subscribe-email" data-members-email placeholder="email@voorbeeld.nl" autocomplete="false" />
-            <button class="button primary" type="submit">
-                <span class="button-content">Aanmelden</span>
-                <span class="button-loader">{{> "icons/loader"}}</span>
+            <input class="subscribe-email" name="member[email]" placeholder="email@voorbeeld.nl" autocomplete="false" />
+            <button class="button primary button_subscribe" type="submit" name="member[subscribe]"> <span
+                    class="button-content">Aanmelden</span>
             </button>
         </div>
         <div class="message-success">
-            <strong>Wow cool!</strong> Check je email even, want je hebt een bericht waarin ik je vraag om je aanmelding te bevestigen.
-        </div>
-        <div class="message-error">
-            Gebruik even een geldig emailadres.
-        </div>
+                        <strong>Wow cool!</strong> Er is een nieuwe scherm geopend waarin Revue (de nieuwdbrievendienst) je uitleg geeft. <br>Dank je!
+                    </div>
     </form>
 </section>
