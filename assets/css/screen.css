@@ -615,6 +615,9 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     background: #fff;
 }
 
+.page-archief .post-feed {
+    padding-top: 0;
+}
 .post-card {
     position: relative;
     flex: 1 1 301px;
@@ -628,6 +631,10 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     background-size: cover;
 }
 
+.page-archief .post-content {
+    align-items: normal;
+    padding-top: 2em;
+}
 .post-card-image-link {
     position: relative;
     display: block;
@@ -672,6 +679,12 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     font-weight: 500;
     letter-spacing: 0.2px;
     text-transform: uppercase;
+}
+
+.page-archief .post-card-primary-tag {
+    font-size: 2rem;
+    padding-top: 2rem;
+    text-transform: capitalize;
 }
 
 .post-card-title {
@@ -853,12 +866,19 @@ make sure this only happens on large viewports / desktop-ish devices.
         border-top: 0;
     }
 
+
     .post-card-large.post-card-custom {
         min-height: 0;
         padding-bottom: 30px;
         margin-bottom: 10px;
         border-bottom-width: 0px;
     }
+
+    .page-archief .post-card-large.post-card-custom {
+            min-height: 0;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
 
     .post-card-large.post-card-custom .post-card-content-link, .post-card-large.post-card-custom .post-card-meta {
         padding: 0;
@@ -901,6 +921,9 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-card-large .post-card-title {
         margin-top: 0;
         font-size: 3.2rem;
+    }
+    .page-archief .post-card-large .post-card-title {
+        font-weight: normal;
     }
 
     .post-card-large .post-card-content-link {

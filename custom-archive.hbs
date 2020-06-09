@@ -5,11 +5,12 @@
 </header>
 {{#post}}
 
-
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner posts">
-
+      <div class="post-content">
+        {{content}}
+      </div>
         <div class="post-feed">
              {{#get "posts" include="tags, authors"}}
                   {{#foreach posts}}
@@ -18,7 +19,7 @@
                   {{/foreach}}
               {{/get}}
         </div>
-        <div>
+        {{!-- <div>
           {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
               {{#foreach tags}}
                 <p>
@@ -29,10 +30,9 @@
               {{/foreach}}
               {{/get}}
 
-        </div>
+        </div> --}}
     </div>
 </main>
 
-              
 {{/post}}
 
